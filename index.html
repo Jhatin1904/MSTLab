@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathematical Operations</title>
+
+    <style>
+        /* Background image style */
+        body {
+            background-image: url('1.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover; /* Ensure background fills the screen */
+            display: flex;
+            justify-content: center; /* Center content horizontally */
+            align-items: center; /* Center content vertically */
+            height: 100vh; /* Take full viewport height */
+            margin: 0; /* Remove default margin */
+        }
+
+        /* Container for the buttons */
+        .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background for readability */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            margin: 10px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #39d4da;
+        }
+    </style>
+
+    <script>
+        // JavaScript function to navigate to the respective pages
+        function navigateToPage(page) {
+            window.location.href = page;
+        }
+    </script>
+
+</head>
+<body>
+
+    <!-- Container for the content -->
+    <div class="container">
+        <h1>Mathematical Operations</h1>
+        
+        <!-- Buttons linked to different pages using JavaScript -->
+        <button onclick="navigateToPage('even-or-odd.html')">Even or Odd</button>
+        <button onclick="navigateToPage('palindrome.html')">Palindrome</button>
+        <button onclick="navigateToPage('factorial.html')">Factorial</button>
+        <button onclick="navigateToPage('fibonacci.html')">Fibonacci</button>
+    </div>
+
+</body>
+</html>
