@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Check</title>
+
+    <style>
+        /* Background image style */
+        body {
+            background-image: url('4.jpeg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover; /* Ensure background fills the screen */
+            display: flex;
+            justify-content: center; /* Center content horizontally */
+            align-items: center; /* Center content vertically */
+            height: 100vh; /* Full viewport height */
+            margin: 0; /* Remove default margin */
+        }
+
+        /* Container for the content */
+        .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background for readability */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px; /* Maximum width of the container */
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 1.2em;
+            margin-top: 10px;
+            width: 100%;
+            max-width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            margin-top: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        button:hover {
+            background-color: #39d4da;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #333;
+            margin-top: 20px;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: #39d4da;
+        }
+    </style>
+
+    <script>
+        function checkPalindrome() {
+            const text = document.getElementById('text').value;
+            const result = document.getElementById('palindromeResult');
+
+            if (text === '') {
+                result.textContent = "Please enter some text!";
+            } else {
+                const reversedText = text.split('').reverse().join('');
+                if (text === reversedText) {
+                    result.textContent = text + " is a Palindrome.";
+                } else {
+                    result.textContent = text + " is not a Palindrome.";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Container for the content -->
+    <div class="container">
+        <h1>Palindrome Checker</h1>
+        <label for="text">Enter text:</label>
+        <input type="text" id="text" required>
+        <button onclick="checkPalindrome()">Check</button>
+        <p id="palindromeResult"></p>
+        <br>
+        <a href="index.html">Back to Home</a>
+    </div>
+
+</body>
+</html>

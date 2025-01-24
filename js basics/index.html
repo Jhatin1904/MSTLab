@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathematical Operations</title>
+
+    <style>
+        /* Background image style */
+        body {
+            background-image: url('1.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover; /* Ensure background fills the screen */
+            display: flex;
+            justify-content: center; /* Center content horizontally */
+            align-items: center; /* Center content vertically */
+            height: 100vh; /* Take full viewport height */
+            margin: 0; /* Remove default margin */
+        }
+
+        /* Container for the buttons */
+        .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background for readability */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 60%; /* Set width of the container */
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            margin: 10px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #39d4da;
+        }
+
+        /* Styling for the iframe */
+        iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- Container for the content -->
+    <div class="container">
+        <h1>Mathematical Operations</h1>
+        
+        <!-- Buttons to display different operations in iframe -->
+        <button onclick="loadIframe('even-or-odd.html')">Even or Odd</button>
+        <button onclick="loadIframe('palindrome.html')">Palindrome</button>
+        <button onclick="loadIframe('factorial.html')">Factorial</button>
+        <button onclick="loadIframe('fibonacci.html')">Fibonacci</button>
+
+        <!-- Iframe to display the selected content -->
+        <iframe id="operationIframe" src="" title="Operation Display"></iframe>
+    </div>
+
+    <script>
+        // JavaScript function to load the respective content into the iframe
+        function loadIframe(page) {
+            document.getElementById("operationIframe").src = page;
+        }
+    </script>
+
+</body>
+</html>
